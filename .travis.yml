@@ -1,3 +1,7 @@
+addons:
+  hostname: myshorthost
+  hosts:
+  - myshorthost
 install: mvn install -q -DskipTests=true
 jdk:
 - oraclejdk8
@@ -11,4 +15,4 @@ script:
 - echo TESTNUM $(find . -name TEST-*.xml -newer /tmp/NOW | wc -l)
 services:
 - mongodb
-sudo: false
+sudo: true
